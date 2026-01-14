@@ -11,8 +11,8 @@
     // - Demonstrates auto-properties in C#
 
     public string Name { set; get; }
-    public string Type { set; get; }
-        
+    
+          
 
     //static atribute (describres de class, not an object)
     private static int memberCount = 0;
@@ -33,7 +33,13 @@
             // - Otherwise, store the provided value
             // - Demonstrates a full property with a backing field and setter logic
 
-            if (age < 0) age = 0;
+     
+            if (value < 0)
+                age = 0;
+                   else
+            age = value;
+     
+     
         }
     }
 
@@ -77,7 +83,7 @@
     // - This property should be readable publicly but only writable inside the class
     // - Demonstrates controlled access to a property
     public string MembershipLevel { get; private set; }
-
+        
     
     
 
